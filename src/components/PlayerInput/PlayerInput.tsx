@@ -18,19 +18,19 @@ export const PlayerInput = () => {
     return (
         <>
             <div className={styles.playerInput}>
-                <label for='name1'>Player 1</label>
+                <label>Player 1</label>
                 <input name='name1' id='name1' />
             </div>
             <div className={styles.playerInput}>
-                <label for='name2'>Player 2</label>
+                <label>Player 2</label>
                 <input name='name2' id='name2' />
             </div>
             <div className={styles.playerInput}>
-                <label for='name3'>Player 3</label>
+                <label>Player 3</label>
                 <input name='name3' id='name3'/>
             </div>
             <div className={styles.playerInput}>
-                <label for='name4'>Player 4</label>
+                <label>Player 4</label>
                 <input name='name4' id='name4' />
             </div>
             {/* <button type='submit' onClick={updatePlayerNames}>Start Game</button> */}
