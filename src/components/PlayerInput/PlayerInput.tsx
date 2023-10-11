@@ -1,39 +1,27 @@
-"use client";
 import styles from './PlayerInput.module.css'
-import { useState } from 'react'
 
-export const PlayerInput = () => {
-    const [player1, setPlayer1] = useState('');
-    const [player2, setPlayer2] = useState('');
-    const [player3, setPlayer3] = useState('');
-    const [player4, setPlayer4] = useState('');
-
-    // const updatePlayerNames = () => {
-    //     setPlayer1(name1);
-    //     setPlayer2(name2);
-    //     setPlayer3(name3);
-    //     setPlayer4(name4);
-    // };
-
+export const PlayerInput = (setNumber) => {
+    const onClick = (value: number) => {
+        setNumber(value);
+    }
     return (
         <>
-            <div className={styles.playerInput}>
-                <label>Player 1</label>
-                <input name='name1' id='name1' />
+            <p className={styles.p}>How many people will be playing the game?</p>
+            <div className={styles.form}>
+                <div>
+                    <input type="radio" id="2" name="num_players" value={2} />
+                    <label for="2" className={styles.label}>Two</label>
+                </div>
+                <div>
+                    <input type="radio" id="3" name="num_players" value={3} />
+                    <label for="3" className={styles.label}>Three</label>
+                </div>
+                <div>
+                    <input type="radio" id="4" name="num_players" value={4} />
+                    <label for="4" className={styles.label}>Four</label>
+                </div>
+                <button onClick={onClick} className={styles.submit}>Start Game</button>
             </div>
-            <div className={styles.playerInput}>
-                <label>Player 2</label>
-                <input name='name2' id='name2' />
-            </div>
-            <div className={styles.playerInput}>
-                <label>Player 3</label>
-                <input name='name3' id='name3'/>
-            </div>
-            <div className={styles.playerInput}>
-                <label>Player 4</label>
-                <input name='name4' id='name4' />
-            </div>
-            {/* <button type='submit' onClick={updatePlayerNames}>Start Game</button> */}
         </>
-    )
+      );
 }

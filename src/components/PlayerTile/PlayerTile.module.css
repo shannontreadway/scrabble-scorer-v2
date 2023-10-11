@@ -1,0 +1,30 @@
+.tile {
+    border: 3px solid #5F4B32;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+}
+
+.tile h3{
+    font-size: 1.5rem;
+}
+
+.tile h4{
+    font-size: 1.5rem;
+}
+
+.formSection {
+    font-size: 1.25rem;
+    display: flex;
+    column-gap: 1rem;
+}
+
+.formSection label {
+    min-width: 200px;
+}
+
+.form button {
+    padding: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.25rem;
+}
